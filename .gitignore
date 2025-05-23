@@ -1,0 +1,71 @@
+# Gitignore for Yuho x LLM Environment Setup Project
+
+# Python artifacts
+# -----------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+
+# Virtual environment
+# -------------------
+.venv/
+venv/
+env/
+# Specific to poetry or pipenv if you use them:
+.direnv/
+.python-version
+
+# Environment variables
+# ---------------------
+.env
+.flaskenv
+
+# Jupyter Notebook specific files
+# -------------------------------
+.ipynb_checkpoints/
+*.ipynb-filter
+# Exclude VSCode-generated notebook metadata files if they appear
+.vscode/*.ipynb
+
+# IDE and OS generated files
+# --------------------------
+.idea/                 # JetBrains IDEs (PyCharm, IntelliJ)
+.vscode/               # VSCode settings (if you don't want to track any)
+# If you have specific VSCode settings you DO want to track,
+# you'd add exceptions like: !.vscode/settings.json
+*.sublime-project
+*.sublime-workspace
+.DS_Store              # macOS
+Thumbs.db              # Windows
+ehthumbs.db            # Windows
+*.aux                  # LaTeX compilation artifacts
+*.log                  # General log files (unless specifically tracked)
+*.tmp                  # Temporary files
+
+# Data directories (Crucial for data science projects - these should NOT be committed)
+# ----------------------------------------------------------------------------------
+# Exclude the entire 'data' directory as it contains generated or large files.
+# Your pipeline should be able to regenerate these.
+data/
+
+# Specific large files at the root level
+# --------------------------------------
+faiss_index.pkl        # Your FAISS index file (should ideally be in data/processed/ or data/models/)
+
+# Large pre-trained models (if downloaded into 'models/' at root)
+# ----------------------------------------------------------------
+# Exclude the entire 'models' directory as it contains large LLM weights.
+models/
+
+# Logs and Outputs (Generated during runtime, should not be committed)
+# -------------------------------------------------------------------
+logs/                  # All development and runtime logs
+outputs/               # All generated outputs (figures, reports, temporary files)
+
+# Temporary files created during development
+# ------------------------------------------
+temp.py
+temp.txt
