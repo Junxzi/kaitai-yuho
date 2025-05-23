@@ -69,3 +69,6 @@ outputs/               # All generated outputs (figures, reports, temporary file
 # ------------------------------------------
 temp.py
 temp.txt
+
+# System/OS generated directories
+.Trash-*/
