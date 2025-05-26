@@ -26,7 +26,7 @@
 - **LlamaIndex**: Retrieval Augmented Generation (RAG) パイプライン構築フレームワーク  
 - **HuggingFace `pkshatech/RoSEtta-base`**: 埋め込み生成用日本語モデル  
 - **SentenceTransformerRerank `hotchpotch/japanese-reranker-cross-encoder-base-v1`**: 検索結果のリランク用  
-- **FAISS (`faiss-cpu`)**: ベクトル検索用インデックス構築ライブラリ  
+- **FAISS (`faiss-gpu`)**: ベクトル検索用インデックス構築ライブラリ  
 - **Pandas**: データフレーム操作と管理  
 - **JSON**: 要約結果の出力形式  
 - **WSL2**: Windows上のLinux環境およびGPUアクセラレーション用  
